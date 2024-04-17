@@ -1,21 +1,14 @@
 import React from 'react';
-import './App.scss';
-
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
-
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
+import { UserWarning } from './components/UserWarning';
+import { TodoApp } from './components/TodoApp';
+import { USER_ID } from './constants/USER_ID';
 
 export const App: React.FC = () => {
+  if (!USER_ID) {
+    return <UserWarning />;
+  }
+
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
-    </div>
+    <TodoApp />
   );
 };
