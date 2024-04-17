@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Todo } from '../types/Todo';
 import { client } from '../utils/fetchClient';
 

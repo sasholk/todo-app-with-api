@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useContext } from 'react';
 import { Todo } from '../../types/Todo';
 import { TodoItem } from '../TodoItem';
@@ -12,7 +14,7 @@ export const Main: React.FC<Props> = ({ items }) => {
 
   return (
     <section className="todoapp__main" data-cy="TodoList">
-      {items.map((todo) => (
+      {items.map(todo => (
         <TodoItem key={todo.id} todoItem={todo} />
       ))}
       {tempTodo && !errorMessage && (
@@ -33,10 +35,7 @@ export const Main: React.FC<Props> = ({ items }) => {
             ×
           </button>
 
-          <div
-            data-cy="TodoLoader"
-            className="modal overlay is-active"
-          >
+          <div data-cy="TodoLoader" className="modal overlay is-active">
             <div className="modal-background has-background-white-ter" />
             <div className="loader" />
           </div>

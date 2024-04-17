@@ -8,7 +8,5 @@ export const App: React.FC = () => {
     return <UserWarning />;
   }
 
-  return (
-    <TodoApp />
-  );
+  return <TodoApp />;
 };

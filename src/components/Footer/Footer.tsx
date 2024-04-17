@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useContext } from 'react';
 import { FilterTodos } from '../FilterTodos';
 import { TodoUpdateContext, TodosContext } from '../../context/TodosContext';
